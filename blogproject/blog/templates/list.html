@@ -1,0 +1,16 @@
+<h1>Blog project</h1>
+
+<a href="{%url 'new' %}">new writings</a>
+
+{% for blog in blogs%}
+
+<hr>
+<a href="{%url 'detail' blog.id%}">
+{{blog.title}}
+<br>
+{{blog.pub_date}}
+<br>
+{{blog.summary}}
+<br>
+</a>
+{%endfor%} 
